@@ -15,8 +15,8 @@ Beautiful visual project structure viewer with syntax highlighting, built with T
 Download the latest version for your platform:
 
 - **Windows:** [Download Installer](https://github.com/Tikhon00/project-tree-viewer/releases/latest/download/Project.Tree.Viewer_0.1.0_x64-setup.exe)
-- **macOS (Intel):** [Download DMG](https://github.com/Tikhon00/project-tree-viewer/releases/latest/download/Project-Tree-Viewer_0.1.0_x64.dmg)
-- **macOS (Apple Silicon):** [Download DMG](https://github.com/Tikhon00/project-tree-viewer/releases/latest/download/Project-Tree-Viewer_0.1.0_aarch64.dmg)
+- **macOS (Intel):** [Download DMG](https://github.com/Tikhon00/project-tree-viewer/releases/latest/download/Project.Tree.Viewer_0.1.0_aarch64.dmg)
+- **macOS (Apple Silicon):** [Download DMG](https://github.com/Tikhon00/project-tree-viewer/releases/latest/download/Project.Tree.Viewer_0.1.0_aarch64.dmg)
 
 ## 🚀 Usage
 
