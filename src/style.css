@@ -1,0 +1,270 @@
+/* ==================== СБРОС И БАЗОВЫЕ СТИЛИ ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE и Edge */
+}
+
+*::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+    background-color: #18181b;
+    color: #f4f4f5;
+    height: 100vh;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==================== LAYOUT ==================== */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 32px;
+    background: #18181b;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header h1 {
+    font-size: 18px;
+    font-weight: 600;
+    flex: 1;
+    color: #e4e4e7;
+    letter-spacing: -0.3px;
+}
+
+.content {
+    flex: 1;
+    overflow: auto;
+    padding: 24px 32px;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+}
+
+/* ==================== КНОПКИ ==================== */
+button {
+    padding: 8px 16px;
+    background: #27272a;
+    color: #e4e4e7;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+    background: #3f3f46;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+button:active:not(:disabled) {
+    background: #27272a;
+    transform: translateY(1px);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.primary-btn {
+    padding: 12px 32px;
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.primary-btn:hover {
+    background: #e4e4e7;
+}
+
+.primary-btn:active {
+    background: #d4d4d8;
+}
+
+/* ==================== ДЕРЕВО ФАЙЛОВ ==================== */
+.tree-item {
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-bottom: 1px;
+    color: #a1a1aa;
+    transition: all 0.15s;
+}
+
+.tree-item:hover {
+    background: #27272a;
+    color: #e4e4e7;
+}
+
+.tree-item:hover .codicon {
+    opacity: 1;
+}
+
+.tree-icon {
+    margin-right: 10px;
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+.tree-icon .codicon {
+    font-size: 16px;
+    margin-right: 6px;
+}
+
+.tree-arrow {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2px;
+    font-size: 10px;
+    opacity: 0.5;
+    transition: transform 0.2s;
+}
+
+.tree-arrow.expanded {
+    transform: rotate(90deg);
+}
+
+.tree-children {
+    margin-left: 20px;
+    padding-left: 10px;
+    border-left: 1px solid #27272a;
+    display: none;
+}
+
+.tree-children.visible {
+    display: block;
+}
+
+/* ==================== ИКОНКИ ==================== */
+.codicon-folder,
+.codicon-folder-opened {
+    color: #DCAA60;
+}
+
+/* ==================== МОДАЛЬНОЕ ОКНО ==================== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: #18181b;
+    border: 1px solid #27272a;
+    border-radius: 12px;
+    width: 85%;
+    max-width: 900px;
+    max-height: 85vh;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.modal-content h2 {
+    font-size: 14px;
+    padding: 12px 20px;
+    border-bottom: 1px solid #27272a;
+    background: #18181b;
+    color: #a1a1aa;
+    margin: 0;
+}
+
+pre {
+    margin: 0;
+    padding: 20px;
+    overflow: auto;
+    max-height: calc(85vh - 50px);
+    background: #18181b !important;
+}
+
+code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* ==================== ЭКРАН ПРИВЕТСТВИЯ ==================== */
+.welcome-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #a1a1aa;
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+.welcome-icon {
+    font-size: 64px;
+    margin-bottom: 24px;
+    opacity: 0.8;
+}
+
+.welcome-screen h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #e4e4e7;
+    margin-bottom: 12px;
+}
+
+.welcome-screen p {
+    font-size: 14px;
+    margin-bottom: 32px;
+    color: #71717a;
+}
+
+/* ==================== УТИЛИТЫ ==================== */
+.hidden {
+    display: none !important;
+}
+
+/* ==================== АНИМАЦИИ ==================== */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(10px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Tree Viewer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@vscode/codicons@0.0.35/dist/codicon.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Project Tree Viewer</h1>
+            <div class="actions">
+                <button id="selectBtnHeader" class="hidden">Select Folder</button>
+                <button id="exportBtn" disabled>Export as WebP</button>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div id="welcomeScreen" class="welcome-screen">
+                <div class="welcome-icon">📂</div>
+                <h2>No Folder Selected</h2>
+                <p>Open a directory to generate a project tree</p>
+                <button id="selectBtnCenter" class="primary-btn">Select Folder</button>
+            </div>
+            <div id="tree" class="tree hidden"></div>
+        </div>
+    </div>
+    
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="fileName"></h2>
+            </div>
+            <pre><code id="fileContent"></code></pre>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script type="module" src="/main.js"></script>
+</body>
+</html>

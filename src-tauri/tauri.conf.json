@@ -1,0 +1,35 @@
+{
+	"productName": "Project Tree Viewer",
+	"version": "0.1.0",
+	"identifier": "com.tauri.projecttree",
+	"build": {
+		"beforeDevCommand": "npm run dev",
+		"beforeBuildCommand": "npm run build",
+		"devUrl": "http://localhost:1420",
+		"frontendDist": "../dist"
+	},
+	"app": {
+		"windows": [
+			{
+				"title": "Project Tree Viewer",
+				"width": 1200,
+				"height": 800,
+				"label": "main"
+			}
+		],
+		"security": {
+			"csp": "default-src 'self'; style-src 'self' 'unsafe-inline' https://unpkg.com https://cdnjs.cloudflare.com; font-src 'self' https://unpkg.com; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' data: asset: https://raw.githubusercontent.com"
+		}
+	},
+	"bundle": {
+		"active": true,
+		"targets": "all",
+		"icon": [
+			"icons/32x32.png",
+			"icons/128x128.png",
+			"icons/128x128@2x.png",
+			"icons/icon.icns",
+			"icons/icon.ico"
+		]
+	}
+}
