@@ -2,8 +2,6 @@
 
 Beautiful visual project structure viewer with syntax highlighting, built with Tauri + Vite.
 
-![Screenshot](https://via.placeholder.com/800x450.png?text=Add+Screenshot+Here)
-
 ## ✨ Features
 
 - 🌳 **Interactive file tree** with VS Code-style icons
